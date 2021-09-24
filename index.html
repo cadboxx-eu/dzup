@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+ <link rel="stylesheet" href="../dropzone.css" />
+<script src="../dropzone.js"></script>
+
+
+<!--
+Don't forget to give this container the dropzone-previews class 
+so the previews are formatted correctly.
+ -->
+<div id="previews" class="dropzone-previews"></div>
+
+
+<button id="clickable">Click me to select files</button>
+
+<script>
+  new Dropzone(document.body, { // Make the whole body a dropzone
+    url: "/upload/url", // Set the url
+    previewsContainer: "#previews", // Define the container to display the previews
+    clickable: "#clickable" // Define the element that should be used as click trigger to select files.
+  });
+</script>
+
+</body>
+</html>
